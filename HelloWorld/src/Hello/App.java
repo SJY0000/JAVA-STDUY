@@ -1,10 +1,10 @@
-package Hello; // ÆĞÅ°Áö Çï·Î¿ì
+package Hello; // íŒ¨í‚¤ì§€ í—¬ë¡œìš°
 
-public class App { // Å¬·¡½º App ¸¸µé±â
+public class App { // í´ë˜ìŠ¤ App ë§Œë“¤ê¸°
 
 	public static void main(String[] args) {
-		// ¸ŞÀÎ ¸Ş¼Òµå¿¡¼­ ÇÁ·Î±×·¥ ½ÃÀÛ
-		// ÁÖ¼® ´ÜÃâÅ° CTRL + / 
+		// ë©”ì¸ ë©”ì†Œë“œì—ì„œ í”„ë¡œê·¸ë¨ ì‹œì‘
+		// ì£¼ì„ ë‹¨ì¶œí‚¤ CTRL + / 
 		System.out.println("Hello World");
 		// CTRL + F11
 		

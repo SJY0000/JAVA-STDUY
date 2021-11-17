@@ -3,7 +3,7 @@ package application;
 public class App {
 	
 	public static void main(String[] args) {
-		// ¸ŞÀÎ ¸Ş¼Òµå
-		System.out.println("¾È³çÇÏ¼¼¿ä\n»õ ÀÚ¹Ù ÇÁ·Î±×·¥À»\n½ÇÇà ÇÕ´Ï´Ù.");
+		
+		System.out.println("ì•ˆë…•í•˜ì„¸ìš”\nìƒˆ ìë°” í”„ë¡œê·¸ë¨ì„\nì‹¤í–‰ í•©ë‹ˆë‹¤.");
 	}
 }
