@@ -14,7 +14,7 @@ public class UserInput {
 		double f = (c * 9 / 5) + 32; // 실행시 입력을 대기하고 엔터키가 입력되면 종료
 
 		System.out.printf("섭씨 %.1f℃ 는 화씨 %.1f℉ 이다", c, f);
-
+		scanner.close();
 	}
 
 }

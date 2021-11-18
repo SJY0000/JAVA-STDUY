@@ -18,7 +18,7 @@ public class Problem {
 		int monthmoney = (8000 * workingtime);
 		
 		System.out.println("월급은 : " + monthmoney + "원");
-
+		scan.close();
 	}
 
 }
