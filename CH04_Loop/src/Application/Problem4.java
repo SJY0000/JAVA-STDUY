@@ -10,9 +10,9 @@ public class Problem4 {
 		
 		System.out.print("만원권은 ? ");
 		int man = scanner.nextInt();
-		System.out.print("만원권은 ? ");
+		System.out.print("오천원권은 ? ");
 		int ocheon = scanner.nextInt();
-		System.out.print("만원권은 ? ");
+		System.out.print("천원권은 ? ");
 		int cheon =  scanner.nextInt();
 		
 		int total = (man * 10000) + (ocheon * 5000) + (cheon * 1000);
