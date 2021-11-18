@@ -1,8 +1,4 @@
 # 저장할 필요가 없는 파일 이나 폴더
-.setting/
-.classpath
 .metadata
-bin/
-.project
-# 확장자가 .txt인 파일 전부 GIT에 저장하지 않음
-*.txt
+
+
