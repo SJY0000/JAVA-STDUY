@@ -1,0 +1,25 @@
+package Application;
+
+import java.util.Scanner;
+
+public class CherkPassword {
+
+	public static void main(String[] args) {
+		// 지정된 패스워드 입력시 '접속승인' 아니면 '접속불가'
+		final String USER_PASSWORD = "hello";
+
+		System.out.print("비밀번호를 입력 > ");
+
+		Scanner scanner = new Scanner(System.in);
+		String password = scanner.nextLine();
+		scanner.close();
+
+		if (password.equals(USER_PASSWORD)) {
+			System.out.println("접속승인");
+		} else {
+			System.out.println("접속불가");
+		}
+
+	}
+
+}

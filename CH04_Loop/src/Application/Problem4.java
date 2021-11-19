@@ -14,6 +14,7 @@ public class Problem4 {
 		int ocheon = scanner.nextInt();
 		System.out.print("천원권은 ? ");
 		int cheon =  scanner.nextInt();
+		scanner.close();
 		
 		int total = (man * 10000) + (ocheon * 5000) + (cheon * 1000);
 		
