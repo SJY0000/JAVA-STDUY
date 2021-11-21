@@ -40,7 +40,7 @@ public class CheckPassLimit {
 			System.out.printf("비밀번호를 %d번 틀렸습니다.\n", count);
 		}
 		while (!(count == 3));
-
+		scanner.close();
 	}
 
 }
