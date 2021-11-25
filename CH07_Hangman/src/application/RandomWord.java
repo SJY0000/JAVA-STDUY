@@ -16,7 +16,7 @@ public class RandomWord {
 		// 생성자에 랜덤 단어를 선택
 
 		selectWord = words[random.nextInt(words.length)];
-		characters = new char[selectWord.length()]; // 선택단어ㅢ 길이만큼 문자배열 크기로 생성
+		characters = new char[selectWord.length()]; // 선택단어의 길이만큼 문자배열 크기로 생성
 
 	}
 
@@ -33,10 +33,11 @@ public class RandomWord {
 		sb.append("");
 //		characters[3] = 'x';
 		for (char c : characters) {
-//			c = c == '\u0000' ? '_' : c;
-//			sb.append(c);
 			sb.append(c == '\u0000' ? '_' : c); // 못 맞추면 _, 맞추면 c
 			sb.append(' ');
+//			c = c == '\u0000' ? '_' : c;
+//			sb.append(c);
+			
 			// if (c == '\u0000') { // 문자('')의 초기값, 문자형의 null값, 문자형의 값이 없을 경우 값 란 의미는 아직 맞추지
 			// 못한 문자
 ////			text += '_';
@@ -49,17 +50,30 @@ public class RandomWord {
 //		}
 //		text += ' '; // 철자를 한칸씩 스페이스바
 		}
-		System.out.println(selectWord); // 정답출력 (테스트)
+//		System.out.println(selectWord); // 정답출력 (테스트)
 		return sb.toString(); // 선택된 랜덤 단어를 가져옴
 	}
 
-	public void addGuess(char c) {
+	public boolean addGuess(char c) {
 		// 넘어온 문자를 검사해서 선택 단어에 있으면 characters 배열에 저장
 		for (int i = 0; i < selectWord.length(); i++) { // 단어 길이 만큰 반복
 			if (c == selectWord.charAt(i)) {
 				characters[i] = c;
+				return true;
 			}
 		}
+		
+		return false;
 
+	}
+
+	public boolean isCompleted() {
+		// 철자를 다 맞췄는지 체크해서 true or false로 리턴
+		for (char c : characters) { // 단어 전체 철자 반복 검사
+			if(c == '\u0000') {
+				return false; // 아직 맞춰야할 문자가 있음
+			}
+		}
+		return true; // 다 맞췄음
 	}
 }
