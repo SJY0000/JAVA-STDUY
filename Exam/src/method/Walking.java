@@ -15,11 +15,11 @@ public class Walking {
 //		 hint) 메소드의 리턴 타입은 double 이다.
 		Scanner scanner = new Scanner(System.in);	
 		System.out.print("몇 걸음 걸었는지 적어주세요 : ");
-		double a = scanner.nextDouble();
-		double totalCal = calculaterCalory(a);
+		double totalCal = calculaterCalory(scanner.nextDouble());
+		scanner.close();
 		
 		System.out.println("총 소모된 칼로리는 : " + totalCal);
-		scanner.close();
+		
 
 		
 	}
