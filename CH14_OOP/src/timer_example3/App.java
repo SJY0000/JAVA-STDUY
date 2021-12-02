@@ -9,14 +9,14 @@ import java.util.concurrent.TimeUnit;
 class Alert extends TimerTask{
 	@Override
 	public void run() {
-		System.out.println("헬로우");
+		System.out.println("타이머 1 헬로우!");
 	}
 }
 class Task implements Runnable {
 
 	@Override
 	public void run() {
-		System.out.println("하이!");
+		System.out.println("타이머 2 하이!");
 		
 	}
 	

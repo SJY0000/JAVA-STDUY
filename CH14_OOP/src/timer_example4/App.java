@@ -15,10 +15,11 @@ class Alert extends TimerTask {
 	}
 }
 class Task implements Runnable {
-
+	int i = 0;
 	@Override
 	public void run() {
-		System.out.println("계란 삶는 중");
+		i += 1;
+		System.out.println("계란 삶는 중 " + i);
 		
 	}
 	
@@ -32,7 +33,7 @@ public class App {
 		timer.scheduleAtFixedRate(new Alert(), 30000, 30000);
 		
 		ScheduledExecutorService executor = Executors.newScheduledThreadPool(1);
-		executor.scheduleAtFixedRate(new Task(), 0, 5, TimeUnit.SECONDS);
+		executor.scheduleAtFixedRate(new Task(), 5, 5, TimeUnit.SECONDS);
 	}
 
 }

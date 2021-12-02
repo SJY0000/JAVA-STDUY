@@ -8,7 +8,8 @@ import java.util.concurrent.TimeUnit;
 class Task implements Runnable {
 
 	@Override
-	public void run() {
+	public void run() { // Runnable의 추상메소드를 구현(완성)한다.
+		// 할일의 코드를 적는다.
 		System.out.println("헬로우");
 		
 	}
@@ -18,9 +19,9 @@ class Task implements Runnable {
 public class App {
 
 	public static void main(String[] args) {
-//		Timer timer = new Timer();
+//		타이머 2
 		ScheduledExecutorService executor = Executors.newScheduledThreadPool(1);
-		executor.scheduleAtFixedRate(new Task(), 0, 1, TimeUnit.SECONDS);
+		executor.scheduleAtFixedRate(new Task(), 0, 1, TimeUnit.SECONDS); // TimeUnit.seconds 시간 단위 초
 		
 
 	}
