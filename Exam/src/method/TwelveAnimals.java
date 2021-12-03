@@ -5,11 +5,11 @@ import java.util.Scanner;
 public class TwelveAnimals {
 
 	public static void main(String[] args) {
-		// ì¶œìƒ?—°?„?— ?”°ë¥? 12ê°„ì? ?™ë¬¼ì˜ ? ë¥? ì¶œë ¥?•˜?„ë¡? printAnimal()ë©”ì†Œ?“œë¥? ?™„?„±?•˜ê³?
-		// ì¶œë ¥ ?˜ˆ?? ê°™ì? ê²°ê³¼ë¥? ?–»?œ¼?‹œ?˜¤.
+		// ì¶œìƒì—°ë„ì— ë”°ë¥¸ 12ê°„ì§€ ë™ë¬¼ì˜ ë ë¥¼ ì¶œë ¥í•˜ë„ë¡ printAnimal() ë©”ì†Œë“œë¥¼ ì™„ì„±í•˜ê³ 
+		// ì¶œë ¥ì˜ˆì™€ ê°™ì€ ê²°ê³¼ë¥¼ ì–»ìœ¼ì‹œì˜¤
 		
 		Scanner scanner = new Scanner(System.in);
-		System.out.print("ì¶œìƒ?…„?„ë¥? ?…? ¥?•´ì£¼ì„¸?š”. : ");
+		System.out.print("ì¶œìƒí•œ ë…„ë„ë¥¼ ì…ë ¥í•´ì£¼ì„¸ìš”. : ");
 		printAnimal(scanner.nextInt());
 		scanner.close();
 
@@ -18,23 +18,23 @@ public class TwelveAnimals {
 	private static void printAnimal(int birthYear) {
 		String animal = "";
 		switch (birthYear % 12) {
-		case 0 : animal = "?›?ˆ­?´"; break;
-		case 1 : animal = "?‹­"; break;
-		case 2 : animal = "ê°?"; break;
-		case 3 : animal = "?¼ì§?"; break;
-		case 4 : animal = "ì¥?"; break;
-		case 5 : animal = "?†Œ"; break;
-		case 6 : animal = "?˜¸?‘?´"; break;
-		case 7 : animal = "?† ?¼"; break;
-		case 8 : animal = "?š©"; break;
-		case 9 : animal = "ë±?"; break;
-		case 10 : animal = "ë§?"; break;
-		case 11 : animal = "?–‘"; break;
+		case 0 : animal = "ì›ìˆ­ì´"; break;
+		case 1 : animal = "ë‹­"; break;
+		case 2 : animal = "ê°œ"; break;
+		case 3 : animal = "ë¼ì§€"; break;
+		case 4 : animal = "ì¥"; break;
+		case 5 : animal = "ì†Œ"; break;
+		case 6 : animal = "í˜¸ë‘ì´"; break;
+		case 7 : animal = "í† ë¼"; break;
+		case 8 : animal = "ìš©"; break;
+		case 9 : animal = "ë±€"; break;
+		case 10 : animal = "ë§"; break;
+		case 11 : animal = "ì–‘"; break;
 		
 		default : animal = "ERROR!"; break;
 		
 		}
-		System.out.printf("%d?…„ => %s? \n", birthYear, animal);
+		System.out.printf("%dë…„ => %së \n", birthYear, animal);
 		
 	}
 
