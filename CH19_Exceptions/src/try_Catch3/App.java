@@ -24,7 +24,7 @@ public class App {
 			String line = scanner.nextLine();
 
 			try { // 예외가 발생할 수 있는 코드를 적용
-				number = Integer.parseInt(line); // 문자열을 정수로 변환
+				number = Integer.parseInt(line); // 문자열을 정수로 변환 // 문자 입력 받아서 변환하는데 숫자 변환해서 int형이 되도 오류 안생기면 밑의 코드로 진행 아니면 catch 코드로 진행
 //				System.out.println(number);
 //				System.out.println(isNumber);
 				isNumber = true; // 숫자 입력 됨
