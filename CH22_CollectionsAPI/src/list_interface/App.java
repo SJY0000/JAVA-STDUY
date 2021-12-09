@@ -33,7 +33,7 @@ public class App {
 		displayList(list3);
 	}
 
-//	(**가 두개면 위쪽 메소드의 설명문이 됨)
+//	(**가 두개면 가까운 메소드의 설명문이 됨)
 //	@param 변수이름 paramiter에 변수로 출력
 	/**입력된 리스트 타입 객체의 아이템들을 출력
 	 * @param list
