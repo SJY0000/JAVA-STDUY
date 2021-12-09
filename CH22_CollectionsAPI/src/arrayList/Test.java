@@ -1,13 +1,17 @@
 package arrayList;
 
 import java.util.ArrayList;
+//import java.util.LinkedList;
 import java.util.Scanner;
+//import java.util.Vector;
 
 public class Test {
 
 	public static void main(String[] args) {
 		Scanner scanner = new Scanner(System.in);
 		ArrayList<Double> numbers = new ArrayList<>();
+//		LinkedList<Double> numbers = new LinkedList<>();
+//		Vector<Double> numbers = new Vector<>();
 
 		double total = 0;
 		while (true) {
