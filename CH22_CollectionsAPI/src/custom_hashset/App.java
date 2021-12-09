@@ -34,6 +34,7 @@ class Creature {
 		return id == other.id;
 	}
 }
+
 public class App {
 	public static void main(String[] args) {
 		// Set 타입은 데이터 중복이 안되고 순서가 없어서 index번호가 없음
