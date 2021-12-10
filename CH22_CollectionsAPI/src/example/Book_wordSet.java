@@ -12,16 +12,34 @@ public class Book_wordSet {
 		// 책 전체 내용을 읽어서 단어로 분리해 list에 넣기
 		// 이 때 list는 단어가 중복되지 않는다. 알파벳 순으로 저장 => TreeSet
 		File dracula = new File("dracula.txt"); 
+		File huk = new File("huk.txt"); 
 		//C:\Users\admin\Desktop\t\JAVA-STUDY\CH22_CollectionsAPI\dracula.txt
 		
 		System.out.println(dracula.exists()); // 파일이 있는지 확인
+		System.out.println(huk.exists()); // 파일이 있는지 확인
 		
 		TreeSet<String> dralist = loadWords(dracula);
+		TreeSet<String> huks = loadWords(huk);
 		
 		System.out.println(dralist.size());
+		System.out.println(huks.size());
 		
-		for (String w : dralist) {
-			System.out.println(w);
+//		for (String w : dralist) {
+//			System.out.println(w);
+//		}
+		displayWords(dralist);
+	}
+	
+	private static void displayWords(TreeSet<String> list) {
+		// 트리셋을 입력받아 그 안에 단어들을 출력한다
+		int count = 0;
+		for (String w : list) {
+			System.out.printf("%-10s \t", w);
+			count++;
+			if (count == 6) {
+				System.out.println();
+				count = 0;
+			}
 		}
 	}
 	/**
