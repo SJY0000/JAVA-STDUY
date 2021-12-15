@@ -6,7 +6,7 @@ import java.util.Map;
 import java.util.Objects;
 import java.util.TreeMap;
 
-import javax.swing.InputMap;
+//import javax.swing.InputMap;
 
 class Person implements Comparable<Person> {
 	// Person의 이름으로 equals 메소드를 만들어 key값의 중복을 이름으로 하도록 한다.
