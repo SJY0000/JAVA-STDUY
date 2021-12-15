@@ -22,7 +22,7 @@ public class App {
 		});
 		System.out.println();
 		// 익명클래스 => 람다식으로
-		list.forEach(t -> System.out.print(t +"\t")); // 인터페이스가 있을 때, 익명클래스를 사용할 수 있는 경우에만 대신해서 람다식으로 사용하근ㅇ
+		list.forEach(t -> System.out.print(t +"\t")); // 인터페이스가 있을 때, 익명클래스를 사용할 수 있는 경우에만 대신해서 람다식으로 사용가능함
 		
 
 	}
