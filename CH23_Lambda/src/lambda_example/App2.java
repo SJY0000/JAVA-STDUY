@@ -1,6 +1,7 @@
 package lambda_example;
 
-interface Runner { // functional interface
+@FunctionalInterface
+interface Runner { // functional interface가 있어야 람다식 사용가능
 	void execute(); // 추상 메소드 1개 => 람다식 사용가능
 }
 
