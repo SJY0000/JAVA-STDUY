@@ -59,11 +59,11 @@ public class RandomWord {
 		for (int i = 0; i < selectWord.length(); i++) { // 단어 길이 만큰 반복
 			if (c == selectWord.charAt(i)) {
 				characters[i] = c;
-				return true;
+				
 			}
 		}
 		
-		return false;
+		return true;
 
 	}
 

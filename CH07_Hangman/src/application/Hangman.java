@@ -41,17 +41,18 @@ public class Hangman {
 		// 유저가 단어를 다 맞췄는지 체크해서 게임을 종료
 		// 게임 종료 확인을 하는 메소드 isCompleted를 RandomWord 클래스에 만들기
 		boolean isCorrect = word.addGuess(lastGuess);
-		
+		remainTries++;
 		if (isCorrect) {
 			if (word.isCompleted()) {
 				System.out.println("잘 맞췄어요!");
 				System.out.println("시도횟수 : " + remainTries);
+				System.out.println("남은횟수 : " + chance);
 				System.out.println("정답은 : " + word.toString());
 				running = false;
 			}
 		} else {
-			remainTries--;
-			if (remainTries == 0) {
+			
+			if (remainTries == chance) {
 				System.out.println("Game Over!");
 				running = false;
 			}
@@ -59,7 +60,8 @@ public class Hangman {
 
 	}
 
-	private int remainTries = 10;
+	private int remainTries = 0;
+	private int chance = 100;
 	private char lastGuess;
 
 	/**
