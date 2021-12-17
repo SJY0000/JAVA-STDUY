@@ -9,16 +9,16 @@ public class And_Or {
 		
 		int result1 = v1 & v2; // AND bit 연산, 둘 다 1일 때 만 1을 return
 		
-		System.out.println(toBinary(v1));
-		System.out.println(toBinary(v2));
-		System.out.println(toBinary(result1));
+		System.out.println(toBinary(v1)); // 01010011
+		System.out.println(toBinary(v2)); // 11010110
+		System.out.println(toBinary(result1)); // 01010010
 		
 		System.out.println("====================");
 		int result2 = v1 | v2; // OR bit 연산 , 둘 중 하나만 1이여도 1을 return
 		
-		System.out.println(toBinary(v1));
-		System.out.println(toBinary(v2));
-		System.out.println(toBinary(result2));
+		System.out.println(toBinary(v1)); // 01010011
+		System.out.println(toBinary(v2)); // 11010110
+		System.out.println(toBinary(result2)); // 11010111
 
 	}
 	public static String toBinary(int value) { // 2진수 문자열로 출력
