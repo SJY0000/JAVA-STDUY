@@ -6,7 +6,7 @@ public class EveryThing {
 	private int Price;
 	private int Stock;
 	
-	public EveryThing(String Category, String Product, int price, int Stock) {
+	public EveryThing(String Category, String Product, int Price, int Stock) {
 		this.Category = Category;
 		this.Product = Product;
 		this.Price = Price;
@@ -43,6 +43,9 @@ public class EveryThing {
 
 	public void setStock(int stock) {
 		Stock = stock;
+	}
+	public void changeStock() {
+		Stock--;
 	}
 
 	@Override

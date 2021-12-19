@@ -1,4 +1,4 @@
-package mall;
+package application;
 
 import main.Shop;
 
