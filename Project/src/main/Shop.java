@@ -62,7 +62,7 @@ public class Shop {
 		case "3": selectProduct(clothProduct); break;
 		case "4": selectProduct(foodProduct); break;
 		case "5": selectProduct(etcProduct); break;
-		case "00": End();
+		case "00": End(); break;
 		
 		default: System.out.println("잘못된 입력입니다. 다시 입력해주세요."); break;
 		}
@@ -70,12 +70,12 @@ public class Shop {
 
 	// 초기메뉴화면 출력
 	public void display() {
-		System.out.println("다잡아쇼핑몰");
-		System.out.println("============");
-		System.out.println("1. 로그인");
-		System.out.println("2. 회원가입");
-		System.out.println("00. 종료");
-		System.out.println("============");
+		System.out.println("    다잡아쇼핑몰");
+		System.out.println("   ==========");
+		System.out.println("  ‖ 1. 로그인  ‖");
+		System.out.println(" ‖  2. 회원가입  ‖");
+		System.out.println("‖  00. 종료      ‖");
+		System.out.println("=================");
 		System.out.print("무엇을 하실지 선택해주세요. : ");
 
 		String enter = scanner.nextLine();
@@ -159,13 +159,47 @@ public class Shop {
 			}
 
 		}
-
+		if (id.equals(users.get(0).getId())) {
+			System.out.println("관리자 계정으로 접속하셨습니다. 관리모드로 들어갑니다");
+			controll();
+		}
+		
 		System.out.println("Enter를 입력하면 메뉴로 이동합니다.");
 		scanner.nextLine();
 		scanner.nextLine();
 
 		Menu();
 
+	}
+	
+	// 관리자 계정으로 로그인시
+	private void controll() {
+		System.out.println("관리모드로 들어오셨습니다.");
+		System.out.println("1. 유저관리모드");
+		System.out.println("2. 판매현황");
+		System.out.println("0. 첫 화면으로 돌아가기");
+		System.out.println("======================");
+		System.out.print("");
+		
+		int choice = scanner.nextInt();
+		
+		switch (choice) {
+		case 0: display(); break;
+		case 1: userManage(); break;
+		case 2: ProductManage(); break;
+		default: System.out.println("잘못입력하셨습니다."); break;
+		}
+		
+	}
+
+	private void ProductManage() {
+		// 물건 목록 추가, 판매 현황
+		
+	}
+
+	private void userManage() {
+		// 회원 수, 유저 삭제
+		
 	}
 
 	// 아이디 중복확인
@@ -297,28 +331,44 @@ public class Shop {
 		System.out.println("==============================================");
 		System.out.printf("총 금액은 %d 원입니다.\n", total);
 		System.out.println("(n 선택시 카테고리선택창으로 돌아갑니다.) ");
-		System.out.print("결제를 진행하시겠습니까? y/n");
+		System.out.print("결제를 진행하시겠습니까? y/n  ");
 		
 		String choice = scanner.nextLine();
 		
 		while(true) {
 			switch (choice) {
-			case "y": Purchase(); break;
+			case "y": Purchase(total); break;
 			case "n": Menu(); break;
 			
 			default: System.out.println("잘못된 입력입니다. 다시 입력해주세요."); break;
 			}	
-		}
-		
-		
-		
-		
-		
+		}	
 	}
 
-	private void Purchase() {
-		// TODO Auto-generated method stub
+	private void Purchase(int total) {
+		System.out.println(" =================================");
+		System.out.printf("‖총 액 %d원 입니다. 결제하시겠습니까?‖\n", total);
+		System.out.println(" =================================");
+		System.out.println("(0번을 입력하시면 카테고리메뉴로 돌아갑니다.)");
+		System.out.print("결제를 하시려면 1번을 입력해주세요. : ");
 		
+		int recipe = scanner.nextInt();
+		
+		
+			switch (recipe) {
+			case 0 : System.out.println("카테고리 선택 메뉴로 돌아갑니다. 엔터를 입력해주세요.");
+					
+					scanner.nextLine();
+					
+					Menu(); break;
+			
+			case 1 : System.out.println("구매해주셔서 감사합니다. 프로그램이 종료됩니다.");
+					
+			System.exit(0); break; // 프로그램이 종료가 안됨
+			
+			default: System.out.println("잘못된 입력하셨습니다. 다시 입력해주세요."); break;
+			
+			}	
 	}
 	
 	
