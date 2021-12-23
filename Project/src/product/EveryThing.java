@@ -44,6 +44,7 @@ public class EveryThing {
 	public void setStock(int stock) {
 		Stock = stock;
 	}
+	
 	public void changeStock() {
 		Stock--;
 	}
